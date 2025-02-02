@@ -2,8 +2,8 @@ import MeetingTypeList from '@/components/MeetingTypeList';
 
 const Home = () => {
   const now = new Date();
-  const time = now.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true});
-  const date = (new Intl.DateTimeFormat('en-US', {weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'})).format(now); 
+  const time = now.toLocaleTimeString(undefined, {hour: '2-digit', minute: '2-digit', hour12: true});
+  const date = (new Intl.DateTimeFormat(undefined, {weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'})).format(now); 
   return (
     <section className="flex size-full flex-col gap-10 text-white">
       <div className='h-[300px] w-full rounded-[20px] bg-hero bg-cover'>
